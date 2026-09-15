@@ -7,7 +7,7 @@
     <ProjectReference Include="..\..\CK.SqlServer.Transaction\CK.SqlServer.Transaction.csproj" />
     <PackageReference Include="CK.Testing.SqlServer" Version="15.0.4" />
     <PackageReference Include="CK.Testing.Nunit" Version="15.0.4" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.5.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="6.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="6.3.0" />
   </ItemGroup>
 </Project>
