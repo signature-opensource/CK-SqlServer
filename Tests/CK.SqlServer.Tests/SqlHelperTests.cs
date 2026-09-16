@@ -71,8 +71,8 @@ public class SqlHelperTests
             SqlHelper.IsUtcMaxValue( (DateTime)oMaxDate, 2 ).ShouldBeTrue();
             SqlHelper.IsUtcMaxValue( (DateTime)oMaxDate, 1 ).ShouldBeTrue();
             SqlHelper.IsUtcMaxValue( (DateTime)oMaxDate, 0 ).ShouldBeTrue();
-            Assert.Throws<ArgumentOutOfRangeException>( () => SqlHelper.IsUtcMaxValue( (DateTime)oMaxDate, -1 ) );
-            Assert.Throws<ArgumentOutOfRangeException>( () => SqlHelper.IsUtcMaxValue( (DateTime)oMaxDate, 8 ) );
+            Should.Throw<ArgumentOutOfRangeException>( () => SqlHelper.IsUtcMaxValue( (DateTime)oMaxDate, -1 ) );
+            Should.Throw<ArgumentOutOfRangeException>( () => SqlHelper.IsUtcMaxValue( (DateTime)oMaxDate, 8 ) );
 
             cmd.CommandText = "select convert( datetime2(2), '99991231 23:59:59.9999999' )";
             object oMaxDate2 = cmd.ExecuteScalar();
