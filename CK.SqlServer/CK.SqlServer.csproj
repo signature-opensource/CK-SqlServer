@@ -7,7 +7,7 @@
   <ItemGroup>
     <PackageReference Include="CK.Abstractions" Version="29.0.5--ci.2" />
     <PackageReference Include="CK.ActivityMonitor.SimpleSender" Version="26.0.4--ci.3" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.3" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
