@@ -9,7 +9,8 @@ using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static CK.Testing.SqlServerTestHelper;
+using CK.Testing;
+using static CK.Testing.MonitorTestHelper;
 
 namespace CK.SqlServer.Tests;
 

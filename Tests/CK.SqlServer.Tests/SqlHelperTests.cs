@@ -4,7 +4,8 @@ using NUnit.Framework;
 using System;
 using System.Data;
 using Microsoft.Data.SqlClient;
-using static CK.Testing.SqlServerTestHelper;
+using CK.Testing;
+using static CK.Testing.MonitorTestHelper;
 
 namespace CK.SqlServer.Tests;
 
