@@ -8,6 +8,15 @@
     <PackageReference Include="CK.Abstractions" Version="31.0.2--ci.2" />
     <PackageReference Include="CK.ActivityMonitor.SimpleSender" Version="27.1.2--ci.2" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.2" />
+    <!--
+      Microsoft.Data.SqlClient 7.x has no net10.0 build: on net10.0 it falls back to its net9.0 one, which brings
+      System.Configuration.ConfigurationManager and System.Diagnostics.EventLog 9.0.x. Hosts and test projects get
+      EventLog 10.0.x from Microsoft.Extensions.Hosting, so a model bin and its host would carry two different EventLog
+      files, and the engine's assembly check rejects the model bin when the 9.0.x file is dated later than the 10.0.x one.
+      This reference aligns ConfigurationManager (and EventLog with it) on the net10.0 band used by the stack.
+      Remove it once a stable Microsoft.Data.SqlClient ships a net10.0 build.
+    -->
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.12" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
